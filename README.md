@@ -56,3 +56,7 @@ Karena subscriber juga memakai URL yang sama, artinya publisher dan subscriber t
 # Sending and processing event
 
 ![Sending and processing event](public/image/rabbit-run.png)
+
+# Monitoring chart based on publisher
+
+![Monitoring chart based on publisher](public/image/monitoring.png)
