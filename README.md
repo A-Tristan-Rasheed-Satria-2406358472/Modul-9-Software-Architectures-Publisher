@@ -52,3 +52,7 @@ Karena subscriber juga memakai URL yang sama, artinya publisher dan subscriber t
 # Running RabbitMQ as message brokert
 
 ![Running RabbitMQ as message brokert](public/image/rabbit.png)
+
+# Sending and processing event
+
+![Sending and processing event](public/image/rabbit-run.png)
