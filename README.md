@@ -60,3 +60,20 @@ Karena subscriber juga memakai URL yang sama, artinya publisher dan subscriber t
 # Monitoring chart based on publisher
 
 ![Monitoring chart based on publisher](public/image/monitoring.png)
+
+# Cloud Experiment (Bonus)
+
+Pada versi cloud, publisher dan subscriber tidak lagi memakai `localhost`, tetapi memakai host/IP VM tempat RabbitMQ berjalan, misalnya:
+
+`amqp://guest:guest@<PUBLIC_IP_OR_DNS>:5672`
+
+Supaya publisher bisa connect dari luar mesin broker, port AMQP harus dibuka di firewall/security group:
+
+- `5672` untuk koneksi AMQP client (publisher/subscriber)
+- `15672` opsional, untuk akses RabbitMQ Management UI dari browser
+
+Refleksi “Make it works” di cloud:
+
+- Saat port belum dibuka, error yang muncul biasanya `ConnectionRefused` atau timeout.
+- Setelah port dibuka dan service RabbitMQ aktif, publisher langsung bisa push message ke queue.
+- Dari sisi publisher, burst traffic tetap bisa terkirim cepat karena publisher hanya enqueue ke broker, bukan menunggu subscriber selesai proses.
