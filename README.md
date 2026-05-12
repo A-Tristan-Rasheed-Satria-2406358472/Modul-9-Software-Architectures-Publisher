@@ -48,3 +48,7 @@ Karena subscriber juga memakai URL yang sama, artinya publisher dan subscriber t
 - Publisher dan subscriber harus mengarah ke broker yang sama supaya bisa saling terhubung lewat message
 - URL koneksi berisi protokol, username, password, host, dan port
 - `localhost:5672` menunjukkan service broker berjalan secara lokal di port standar AMQP
+
+# Running RabbitMQ as message brokert
+
+![Running RabbitMQ as message brokert](public/image/rabbit.png)
